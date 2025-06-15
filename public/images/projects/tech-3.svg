@@ -1,0 +1,46 @@
+<svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25.5474" cy="25.5474" r="24.8107" fill="url(#paint0_linear_1_4509)" stroke="url(#paint1_linear_1_4509)" stroke-width="0.526653"/>
+<g clip-path="url(#clip0_1_4509)">
+<path d="M20.4388 37.3137L14.75 14.6899L37.25 21.0087" fill="white"/>
+<path d="M23.2175 27.5901L24.6388 33.2488" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M28.8313 29.1801L23.2175 27.5901" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M24.6388 33.2487L28.8313 29.1799" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M24.6388 33.2487L19.025 31.6587" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M19.025 31.6587L20.4463 37.3212L24.6388 33.2487" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M19.025 31.6588L23.2175 27.5901" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M23.2175 27.5901L27.4138 23.5176" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M27.4138 23.5175L31.6063 19.4487" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M25.9925 17.8586L27.4138 23.5174" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M27.4138 23.5174L21.7963 21.9312" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M21.7963 21.9312L23.2175 27.5899" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M23.2175 27.59L17.6038 26" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M17.6038 26L19.025 31.6587" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M16.1825 20.3413L17.6038 26.0001" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M21.7963 21.9313L16.1825 20.3413" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M17.6038 25.9999L21.7963 21.9312" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M21.7963 21.9274L25.9925 17.8586" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M25.9925 17.8588L20.375 16.2688" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M20.375 16.2688L21.7963 21.9275" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M16.1825 20.3412L14.7613 14.6787L20.375 16.2687" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M16.1825 20.3413L20.375 16.2688" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M33.0275 25.1075L37.22 21.0387L31.6063 19.4487" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M31.6063 19.4487L33.0275 25.1075" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M33.0275 25.1076L27.4138 23.5176" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M27.4138 23.5176L28.8313 29.1801" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M28.8313 29.1799L33.0275 25.1074" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+<path d="M31.6063 19.4486L25.9925 17.8586" stroke="black" stroke-width="0.48" stroke-miterlimit="10"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1_4509" x1="11.1254" y1="1" x2="48.4914" y2="9.89991" gradientUnits="userSpaceOnUse">
+<stop stop-color="#04071D"/>
+<stop offset="1" stop-color="#0C0E23"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1_4509" x1="25.5474" y1="1" x2="25.5474" y2="50.0948" gradientUnits="userSpaceOnUse">
+<stop stop-color="#66699C" stop-opacity="0.43"/>
+<stop offset="1" stop-color="#363749" stop-opacity="0.49"/>
+</linearGradient>
+<clipPath id="clip0_1_4509">
+<rect width="24" height="24" fill="white" transform="translate(14 14)"/>
+</clipPath>
+</defs>
+</svg>
