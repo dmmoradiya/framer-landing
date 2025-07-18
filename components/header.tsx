@@ -1,12 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import Projects from "./projects";
-import Testimonials from "./testimonials";
-import Experience from "./experience";
+import { useEffect, useState } from "react";
 import Approach from "./approach";
+import Experience from "./experience";
 import Footer from "./footer";
+import Projects from "./projects";
+import RecentWorkSection from "./RecentWork";
+import TechStackSection from "./techstack/TechStackSection";
+import Testimonials from "./testimonials";
 
 // Typewriter component for smooth animated text with subtle shadow effect
 const TypewriterText = ({
@@ -138,11 +140,10 @@ const Header = () => {
     <>
       {/* Floating Navbar */}
       <nav
-        className={`fixed top-12 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${
-          isVisible
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-full"
-        }`}
+        className={`fixed top-12 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${isVisible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 -translate-y-full"
+          }`}
       >
         <div
           className="backdrop-blur-md border border-white/10 rounded-2xl px-6 md:px-12 py-3 md:py-5"
@@ -293,23 +294,11 @@ const Header = () => {
               className="relative -mt-60 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10 w-full items-center justify-center"
             >
               <div className="w-full md:w-auto flex justify-center">
-                <Image
-                  src="/images/laptop.png"
-                  alt="Hero Image"
-                  width={700}
-                  height={700}
-                  className="w-full max-w-[90%] md:max-w-sm lg:max-w-none"
-                />
+                <RecentWorkSection />
               </div>
               <div className="flex flex-col space-y-3 md:space-y-5 w-full md:w-auto">
                 <div className="flex justify-center">
-                  <Image
-                    src="/images/techstack.png"
-                    alt="Tech Stack"
-                    width={540}
-                    height={100}
-                    className="w-full max-w-[90%] md:max-w-sm lg:max-w-none"
-                  />
+                  <TechStackSection />
                 </div>
                 <div className="flex justify-center">
                   <Image

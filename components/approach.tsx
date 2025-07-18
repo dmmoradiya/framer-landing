@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const approachSteps = [
   {
@@ -28,78 +28,6 @@ const approachSteps = [
   },
 ];
 
-function AnimatedRing({ isHovered }: { isHovered: boolean }) {
-  return (
-    <svg
-      width="100%"
-      height="100%"
-      viewBox="0 0 400 400"
-      fill="none"
-      className={`absolute inset-0 transition-all duration-700 ${
-        isHovered ? "opacity-0 scale-95" : "opacity-100 scale-100"
-      }`}
-      style={{ zIndex: 1 }}
-    >
-      {/* Dense Bundle of Close Lines - Each with Random Direction */}
-      {Array.from({ length: 9 }, (_, i) => {
-        const baseRadius = 130; // Much larger radius to avoid overlapping with phase button
-        const radiusOffset = (i - 0.03) * 2; // Much closer spacing between lines
-        const animationDelay = i * 0.03; // Very quick staggered start
-        const opacity = 0.4 + (i % 5) * 0.12; // More opacity variation
-        const randomDirection = Math.random() > 0.2 ? "normal" : "reverse"; // Random direction
-        const randomSpeed = 10 + Math.random() * 4; // Random speed between 6-10s
-
-        // Create organic path with small variations
-        const createBundledPath = (index: number) => {
-          const points = [];
-          const numPoints = 16;
-
-          for (let j = 0; j < numPoints; j++) {
-            const angle = (j / numPoints) * 2 * Math.PI;
-            // Small organic variation - very tight bundle
-            const organicVariation = Math.sin(angle * 5 + index * 0.4) * 4;
-            const radius = baseRadius + radiusOffset + organicVariation;
-            const x = 200 + radius * Math.cos(angle); // Center at 200,200 for 400x400 viewBox
-            const y = 200 + radius * Math.sin(angle);
-            points.push(`${x},${y}`);
-          }
-
-          // Create smooth curve
-          let path = `M ${points[0]}`;
-          for (let j = 0; j < points.length; j++) {
-            const current = points[j].split(",").map(Number);
-            const next = points[(j + 1) % points.length].split(",").map(Number);
-            const controlX = (current[0] + next[0]) / 2;
-            const controlY = (current[1] + next[1]) / 2;
-            path += ` Q ${current[0]},${current[1]} ${controlX},${controlY}`;
-          }
-          path += " Z";
-          return path;
-        };
-
-        return (
-          <path
-            key={i}
-            d={createBundledPath(i)}
-            fill="none"
-            stroke="rgb(203,172,249)"
-            strokeWidth="0.8"
-            strokeOpacity={opacity}
-            className="animate-spin"
-            style={{
-              transformOrigin: "200px 200px", // Updated to match new center
-              animationDuration: `${randomSpeed}s`, // Random speed for each line
-              animationDelay: `${animationDelay}s`,
-              animationDirection: randomDirection, // Random direction for each line
-              animationTimingFunction: "linear",
-            }}
-          />
-        );
-      })}
-    </svg>
-  );
-}
-
 function ApproachCard({
   step,
   isHovered,
@@ -117,9 +45,8 @@ function ApproachCard({
 }) {
   return (
     <div
-      className={`group relative cursor-pointer transition-all duration-500 ${
-        isMobile ? "active:scale-95 touch-manipulation" : ""
-      }`}
+      className={`group relative cursor-pointer transition-all duration-500 ${isMobile ? "active:scale-95 touch-manipulation" : ""
+        }`}
       onMouseEnter={!isMobile ? onHover : undefined}
       onMouseLeave={!isMobile ? onLeave : undefined}
       onClick={isMobile ? onClick : undefined}
@@ -137,9 +64,8 @@ function ApproachCard({
         <img
           src="/images/approach-bg.svg"
           alt="approach background"
-          className={`absolute inset-0 w-full h-full object-cover z-0 pointer-events-none transition-opacity duration-500 ${
-            isHovered ? "opacity-0" : "opacity-100"
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover z-0 pointer-events-none transition-opacity duration-500 ${isHovered ? "opacity-0" : "opacity-100"
+            }`}
           style={{ objectFit: "cover" }}
         />
 
@@ -147,29 +73,25 @@ function ApproachCard({
         <img
           src="/images/approach-bg-hover.svg"
           alt="apprgreatoach background hover"
-          className={`absolute inset-0 w-full h-full object-cover z-0 pointer-events-none transition-opacity duration-500 ${
-            isHovered ? "opacity-40" : "opacity-0"
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover z-0 pointer-events-none transition-opacity duration-500 ${isHovered ? "opacity-40" : "opacity-0"
+            }`}
           style={{ objectFit: "cover" }}
         />
 
         {/* Central Animated Ring and Phase */}
-        <AnimatedRing isHovered={isHovered} />
         <div className="relative flex flex-col items-center justify-center w-full h-full z-10">
           {/* Ring and Phase Button Container - Moves up on hover */}
           <div
-            className={`relative flex items-center justify-center w-44 h-44 mx-auto transition-all duration-500 ${
-              isHovered ? "-translate-y-20" : "translate-y-0"
-            }`}
+            className={`relative flex items-center justify-center w-44 h-44 mx-auto transition-all duration-500 ${isHovered ? "-translate-y-20" : "translate-y-0"
+              }`}
           >
             <div className="relative z-20 flex items-center justify-center w-full h-full">
               <span
                 className={`px-6 py-4 rounded-xl font-semibold text-3xl transition-all duration-300
                   ${step.color}
-                  ${
-                    isHovered
-                      ? "bg-opacity-100 shadow-lg scale-105"
-                      : "bg-opacity-80"
+                  ${isHovered
+                    ? "bg-opacity-100 shadow-lg scale-105"
+                    : "bg-opacity-80"
                   }
                 `}
                 style={{
@@ -186,11 +108,10 @@ function ApproachCard({
           </div>
 
           <div
-            className={`absolute pt-40 px-2 text-center transition-all duration-700 ease-out ${
-              isHovered
+            className={`absolute pt-40 px-2 text-center transition-all duration-700 ease-out ${isHovered
                 ? "opacity-100 translate-y-0 pointer-events-auto"
                 : "opacity-0 translate-y-28 translate-x-28 pointer-events-none"
-            }`}
+              }`}
           >
             <h3 className="text-white text-3xl font-bold mb-3">{step.title}</h3>
             <p className="text-gray-300 text-lg leading-relaxed max-w-xs mx-auto">
