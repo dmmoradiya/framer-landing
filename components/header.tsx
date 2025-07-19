@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 import Approach from "./approach";
 import Experience from "./experience";
 import Footer from "./footer";
-import Projects from "./projects";
+import CtaCard from "./header/CtaCard";
+import CurrentProject from "./header/CurrentProject";
+import StatsCard from "./header/StatsCard";
+import ProjectSection from "./project/ProjectSection";
 import RecentWorkSection from "./RecentWork";
 import TechStackSection from "./techstack/TechStackSection";
 import Testimonials from "./testimonials";
@@ -103,6 +106,8 @@ const Header = () => {
       }
     };
   }, []);
+
+  const shadowClass = "hover:scale-105 hover:shadow-lg hover:shadow-gray-600/30 transition-all duration-300";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -297,66 +302,39 @@ const Header = () => {
                 <RecentWorkSection />
               </div>
               <div className="flex flex-col space-y-3 md:space-y-5 w-full md:w-auto">
-                <div className="flex justify-center">
+                <div className={`flex justify-center ${shadowClass}`}>
                   <TechStackSection />
                 </div>
-                <div className="flex justify-center">
-                  <Image
-                    src="/images/techstack.png"
-                    alt="Tech Stack"
-                    width={540}
-                    height={100}
-                    className="w-full max-w-[90%] md:max-w-sm lg:max-w-none"
-                  />
+                <div className={`flex justify-center ${shadowClass}`}>
+                  <a href="https://testimonial.to/share/hardikdhmeliya/t/0Mn5r3E1XY00rDBBYWPoD9kg7" target="_blank">
+                    <Image
+                      src="/images/testimonial.png"
+                      alt="Testimonial"
+                      width={540}
+                      height={100}
+                      className="w-full max-w-[90%] md:max-w-sm lg:max-w-none border border-primary-300/50 rounded-2xl object-cover"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10 w-full items-center justify-center ">
               <div className="flex flex-col space-y-3 md:space-y-5 w-full md:w-auto order-2 md:order-1">
-                <div className="flex justify-center mt-2 md:mt-0">
-                  <Image
-                    src="/images/techenthu.svg"
-                    alt="Tech Enthusiast"
-                    width={540}
-                    height={100}
-                    className="w-full max-w-[90%] md:max-w-sm lg:max-w-none"
-                  />
+                <div className={`flex justify-center mt-2 md:mt-0 ${shadowClass}`}>
+                  <StatsCard />
                 </div>
-                <div className="flex justify-center">
-                  <Image
-                    src="/images/copyEmail.svg"
-                    alt="Copy Email"
-                    width={540}
-                    height={100}
-                    className="w-full max-w-[90%] md:max-w-sm lg:max-w-none"
-                  />
+                <div className={`flex justify-center ${shadowClass}`}>
+                  <CtaCard />
                 </div>
               </div>
-              <div className="w-full md:w-auto flex justify-center order-1 md:order-2">
-                <Image
-                  src="/images/insideScoop.svg"
-                  alt="Inside Scoop"
-                  width={700}
-                  height={700}
-                  className="w-full max-w-[90%] md:max-w-sm lg:max-w-none"
-                />
+              <div className={`w-full md:w-auto flex justify-center order-1 md:order-2 ${shadowClass}`}>
+                <CurrentProject />
               </div>
             </div>
           </div>
-
-          {/* project section */}
-        </div>
-        <div
-          id="projects-section"
-          className="w-full flex flex-col items-center justify-center bg-[#000319] pt-32 md:-mt-32 px-4"
-        >
-          <h1 className="text-white text-4xl lg:text-5xl font-bold leading-tight text-center md:mb-12">
-            A small selection of
-            <span style={{ color: "#CBACF9" }}> recent projects</span>
-          </h1>
-          <Projects />
         </div>
 
+        <ProjectSection />
         <div
           id="testimonials-section"
           className="w-full flex flex-col items-center justify-center bg-[#000319] pt-[60px] md:pt-[120px] px-4"
